@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Define the source directory
+source_dir="/tmp/sym"
+
+# Define the destination directory
+dest_dir="/tmp/u"
+
+# Ensure the destination directory exists
+mkdir -p "$dest_dir"
+
+# Use a for loop to iterate over files in the source directory
+for file in "$source_dir"/*; do
+  # Check if the file name starts with an uppercase letter
+  if [[ $(basename "$file") =~ ^[A-Z] ]]; then
+    # Move the file to the destination directory
+    mv "$file" "$dest_dir/"
+    echo "Moved $(basename "$file") to $dest_dir/"
+  fi
+done
