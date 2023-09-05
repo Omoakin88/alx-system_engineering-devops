@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'awk "NR % 2 == 1"' >> print_every_other_line
+echo '#!/bin/bash' > print_every_other_line
