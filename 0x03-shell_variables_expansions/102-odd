@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e '#!/bin/bash\ntr "A-Za-z" "N-ZA-Mn-za-m"' > 101-rot13 && chmod +x 101-rot13
+echo 'awk "NR % 2 == 1"' >> print_every_other_line
